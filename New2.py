@@ -1,4 +1,6 @@
-import pickle
+import requests
 
-data = input("Enter data: ")
-pickle.loads(data.encode())
+url = input("Enter URL: ")
+response = requests.get(url, verify=False)
+
+print(response.text)
